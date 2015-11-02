@@ -135,6 +135,9 @@ class IMAP_Copy(object):
         self.logger.info("Looking for mails in %s" % source_mailbox)
         status, data = self._conn_source.search(None, 'ALL')
 
+        print status
+        print data
+        
         data = data[0].split()
         mail_count = len(data)
 
